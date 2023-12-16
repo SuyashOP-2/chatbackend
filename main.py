@@ -63,11 +63,7 @@ from fastapi.middleware.cors import CORSMiddleware
 app = FastAPI()
 
 origins = [
-    "http://localhost.tiangolo.com",
-    "https://localhost.tiangolo.com",
-    "http://localhost",
-    "http://localhost:8080",
-	'http://localhost:5173'
+    "*"
 ]
 
 app.add_middleware(
@@ -83,3 +79,5 @@ def get_res(message: str):
 	ints = predict_class(message) 
 	res = get_response(ints, intents) 
 	return {"res": res}
+
+
