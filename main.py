@@ -4,6 +4,7 @@ import pickle
 import numpy as np 
 import nltk 
 nltk.download('punkt')
+nltk.download('wordnet')
 from keras.models import load_model 
 from nltk.stem import WordNetLemmatizer 
 
